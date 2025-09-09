@@ -1,0 +1,6 @@
+{
+  "apiKey": "",
+  "model": "gpt-oss",
+  "authUrl":     "https://assessmentcoder.com/auth/desktop",
+  "apiBaseUrl":  "https://assessmentcoder.com/api"
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Assessment Coder</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <div class="app-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-off h-5 w-5 text-red-600"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg>
+        </div>
+        <div class="app-title">Assessment Coder</div>
+      </div>
+              <div class="header-center">
+          <div class="shortcuts-display" id="shortcuts-display">
+            <div class="shortcut-group">
+              <span class="shortcut-item" data-shortcut="screenshot"></span>
+              <span class="shortcut-label">Screenshot</span>
+            </div>
+            <div class="shortcut-group">
+              <span class="shortcut-item" data-shortcut="process"></span>
+              <span class="shortcut-label">Process</span>
+            </div>
+            <div class="shortcut-group">
+              <span class="shortcut-item" data-shortcut="scroll"></span>
+              <span class="shortcut-label">Scroll</span>
+            </div>
+            <div class="shortcut-group">
+              <span class="shortcut-item" data-shortcut="hide"></span>
+              <span class="shortcut-label">Hide</span>
+            </div>
+          </div>
+        </div>
+      <div class="header-right">
+        <div class="shortcuts-icon" id="shortcuts-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"/>
+            <path d="M6 3a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3"/>
+            <path d="M9 9h6"/>
+            <path d="M9 15h6"/>
+          </svg>
+          <div class="shortcuts-dropdown" id="shortcuts-dropdown">
+            <div class="dropdown-header">Shortcuts</div>
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <span class="dropdown-shortcut">
+                  <span class="modifier-icon" data-modifier="cmd">⌘</span>
+                  <span class="modifier-icon" data-modifier="alt">Alt</span>
+                  <span class="plus-sign">+</span>
+                  <span class="key-icon" data-key="enter">↵</span>
+                </span>
+                <span class="dropdown-label">Process</span>
+              </div>
+              <div class="dropdown-item">
+                <span class="dropdown-shortcut">
+                  <span class="modifier-icon" data-modifier="cmd">⌘</span>
+                  <span class="modifier-icon" data-modifier="alt">Alt</span>
+                  <span class="plus-sign">+</span>
+                  <span class="key-icon">L</span>
+                </span>
+                <span class="dropdown-label">Add Screenshot</span>
+              </div>
+              <div class="dropdown-item">
+                <span class="dropdown-shortcut">
+                  <span class="modifier-icon" data-modifier="cmd">⌘</span>
+                  <span class="modifier-icon" data-modifier="alt">Alt</span>
+                  <span class="plus-sign">+</span>
+                  <span class="key-icon">N</span>
+                </span>
+                <span class="dropdown-label">Clear Context</span>
+              </div>
+              <div class="dropdown-item">
+                <span class="dropdown-shortcut">
+                  <span class="modifier-icon" data-modifier="cmd">⌘</span>
+                  <span class="modifier-icon" data-modifier="alt">Alt</span>
+                  <span class="plus-sign">+</span>
+                  <span class="key-icon">H</span>
+                </span>
+                <span class="dropdown-label">Hide/Show</span>
+              </div>
+              <div class="dropdown-item">
+                <span class="dropdown-shortcut">
+                  <span class="modifier-icon" data-modifier="cmd">⌘</span>
+                  <span class="modifier-icon" data-modifier="alt">Alt</span>
+                  <span class="plus-sign">+</span>
+                  <span class="modifier-icon" data-modifier="shift">⇧</span>
+                  <span class="plus-sign">+</span>
+                  <span class="key-icon">X</span>
+                </span>
+                <span class="dropdown-label">Sign In</span>
+              </div>
+              <div class="dropdown-item">
+                <span class="dropdown-shortcut">
+                  <span class="modifier-icon" data-modifier="cmd">⌘</span>
+                  <span class="modifier-icon" data-modifier="alt">Alt</span>
+                  <span class="plus-sign">+</span>
+                  <span class="modifier-icon" data-modifier="shift">⇧</span>
+                  <span class="plus-sign">+</span>
+                  <span class="key-icon">Z</span>
+                </span>
+                <span class="dropdown-label">Sign Out</span>
+              </div>
+              <div class="dropdown-item">
+                <span class="dropdown-shortcut">
+                  <span class="modifier-icon" data-modifier="cmd">⌘</span>
+                  <span class="modifier-icon" data-modifier="alt">Alt</span>
+                  <span class="plus-sign">+</span>
+                  <span class="key-icon">Q</span>
+                </span>
+                <span class="dropdown-label">Quit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="auth-status not-authenticated" id="auth-status">
+          <span id="auth-text">Not signed in</span>
+        </div>
+        <div class="status-indicator">
+          <div class="status-dot" id="status-dot"></div>
+          <span id="status-text">Ready</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <div class="conversation" id="conversation">
+        <!-- Messages will be populated here -->
+      </div>
+    </div>
+
+    <!-- Bottom section -->
+    <div class="bottom-section">
+      <div class="navigation">
+        <div class="clear-shortcut">
+                      <span class="shortcut-key" id="clear-shortcut-key">Alt+N</span>
+          <span class="shortcut-label">Clear</span>
+        </div>
+        <div class="model-indicator">
+          <div class="model-info">
+            <span class="model-label">Model:</span>
+            <span class="model-value" id="model-value">Optimus</span>
+          </div>
+          <div class="model-change-shortcut">
+            <span class="shortcut-key" id="model-change-shortcut-key">⌘+M</span>
+            <span class="shortcut-label">Change</span>
+          </div>
+        </div>
+        <div class="requests-counter">
+          <span class="requests-label">Remaining:</span>
+          <span class="counter" id="counter">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentication dialog removed - using seamless authentication only -->
+  
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="ui_renderer.js"></script>
+</body>
+</html>
